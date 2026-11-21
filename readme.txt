@@ -1,4 +1,4 @@
---Readme document for *author(s)*, *email(s)*, *UCI id(s)*--
+--Readme document for Tanyawan Kylie Thongsrinoon and Gabrielle Landavora, *email(s)*, *UCI id(s)*--
 
 1. How many assignment points do you believe you completed (replace the *'s with your numbers)?
 
