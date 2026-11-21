@@ -1,4 +1,4 @@
---Readme document for Tanyawan Kylie Thongsrinoon and Gabrielle Landavora, *email(s)*, *UCI id(s)*--
+--Readme document for Tanyawan Kylie Thongsrinoon (thongsrt@uci.edu, 44844564) and Gabrielle Landavora (glandavo@uci.edu)--
 
 1. How many assignment points do you believe you completed (replace the *'s with your numbers)?
 
