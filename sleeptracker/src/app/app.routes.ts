@@ -10,4 +10,8 @@ export const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full',
   },
+  {
+    path: 'log-sleep',
+    loadComponent: () => import('./log-sleep/log-sleep.page').then( m => m.LogSleepPage)
+  },
 ];
