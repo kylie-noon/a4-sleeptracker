@@ -2,9 +2,6 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonList, IonItem, IonLabel } from '@ionic/angular/standalone';
 import { SleepService } from '../services/sleep.service';
-import { SleepData } from '../data/sleep-data';
-import { OvernightSleepData } from '../data/overnight-sleep-data';
-import { StanfordSleepinessData } from '../data/stanford-sleepiness-data';
 
 @Component({
 	selector: 'app-home',
