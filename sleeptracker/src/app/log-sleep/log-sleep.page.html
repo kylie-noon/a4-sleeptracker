@@ -1,4 +1,30 @@
-<ion-header [translucent]="true">
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Log Overnight Sleep</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-input label="What day and time did you go to bed?" labelPlacement="stacked" type="datetime-local"
+    [(ngModel)]="bedTime"></ion-input>
+  <ion-input label="What day and time did you wake up?" labelPlacement="stacked" type="datetime-local"
+    [(ngModel)]="wakeTime"></ion-input>
+
+  <ion-text color="danger">
+    <p>{{ errorMessage }}</p>
+  </ion-text>
+
+  <ion-button expand="block" [disabled]="!canSave" (click)="save()">
+    Save
+  </ion-button>
+</ion-content>
+
+
+
+<!-- <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>log-sleep</ion-title>
   </ion-toolbar>
@@ -10,4 +36,4 @@
       <ion-title size="large">log-sleep</ion-title>
     </ion-toolbar>
   </ion-header>
-</ion-content>
+</ion-content> -->
