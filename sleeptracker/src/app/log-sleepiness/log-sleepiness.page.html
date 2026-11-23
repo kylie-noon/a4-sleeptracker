@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Log Sleepiness</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Log Sleepiness</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-select
+    label="How sleepy do you feel?"
+    labelPlacement="stacked"
+    placeholder="Choose a number from 1 to 7"
+    [(ngModel)]="chosenRating">
+    @for (n of ratings; track n) {
+      <ion-select-option [value]="n">{{ n }}: {{ descriptions[n] }}</ion-select-option>
+    }
+  </ion-select>
+
+  <ion-input
+    label="When did you feel this way?"
+    labelPlacement="stacked"
+    type="datetime-local"
+    [(ngModel)]="when">
+  </ion-input>
+
+  <ion-text color="danger"><p>{{ errorMessage }}</p></ion-text>
+
+  <ion-button expand="block" [disabled]="!canSave" (click)="save()">Save</ion-button>
+</ion-content>
