@@ -13,7 +13,33 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-button expand="block" routerLink="/log-sleep">Log Overnight Sleep</ion-button>
+  <div class="actions">
+    <ion-button routerLink="/log-sleep">Log Overnight Sleep</ion-button>
+    <ion-button color="secondary" routerLink="/log-sleepiness">Log Sleepiness</ion-button>
+  </div>
+
+  <div class="segment-wrap">
+    <ion-segment [(ngModel)]="chosenView">
+      <ion-segment-button value="all">All</ion-segment-button>
+      <ion-segment-button value="overnight">Overnight</ion-segment-button>
+      <ion-segment-button value="sleepiness">Sleepiness</ion-segment-button>
+    </ion-segment>
+  </div>
+
+  @for (item of displayedData; track item.id) {
+  <ion-card class="entry-card" [class.sleepiness]="!isOvernight(item)">
+    <ion-card-header>
+      <ion-card-subtitle>{{ isOvernight(item) ? '🌙 Overnight Sleep' : '⭐ Sleepiness' }}</ion-card-subtitle>
+      <ion-card-title>{{ item.dateString() }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>{{ item.summaryString() }}</ion-card-content>
+  </ion-card>
+  } @empty {
+  <ion-card>
+    <ion-card-content>Nothing has been logged yet.</ion-card-content>
+  </ion-card>
+  }
+  <!-- <ion-button expand="block" routerLink="/log-sleep">Log Overnight Sleep</ion-button>
   <ion-button expand="block" routerLink="/log-sleepiness">Log Sleepiness</ion-button>
 
   <ion-segment [(ngModel)]="chosenView">
@@ -41,5 +67,5 @@
         <ion-label>Nothing has been logged yet.</ion-label>
       </ion-item>
     }
-  </ion-list>
+  </ion-list> -->
 </ion-content>

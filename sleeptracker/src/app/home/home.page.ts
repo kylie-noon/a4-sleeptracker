@@ -1,15 +1,16 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonList, IonItem, IonLabel, IonSegment, IonSegmentButton } from '@ionic/angular/standalone';
+import { IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonLabel, IonSegment, IonSegmentButton, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent } from '@ionic/angular/standalone';
 import { SleepService } from '../services/sleep.service';
 import { SleepData } from '../data/sleep-data';
+import { OvernightSleepData } from '../data/overnight-sleep-data';
 
 @Component({
 	selector: 'app-home',
 	templateUrl: 'home.page.html',
 	styleUrls: ['home.page.scss'],
-	imports: [IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonList, IonItem, IonLabel, IonSegment, IonSegmentButton, FormsModule, RouterLink],
+	imports: [IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonLabel, IonSegment, IonSegmentButton, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, FormsModule, RouterLink],
 })
 export class HomePage {
 	chosenView: string = 'all'; // shown category of data
@@ -36,5 +37,9 @@ export class HomePage {
 			return SleepService.AllSleepinessData;
 		}
 		return SleepService.AllSleepData;
+	}
+
+	isOvernight(item: SleepData): boolean {
+		return item instanceof OvernightSleepData;
 	}
 }
