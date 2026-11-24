@@ -7,9 +7,9 @@
 - 1/1 The ability to log sleepiness during the day
 - 1/1 The ability to view these two categories of logged data
 - 2/2 Either using a native device resource or backing up logged data
-- */2 Following good principles of mobile design
-- */2 Creating a compelling app
-- */1 A readme and demo video which explains how these features were implemented and their design rationale
+- 2/2 Following good principles of mobile design
+- 2/2 Creating a compelling app
+- 1/1 A readme and demo video which explains how these features were implemented and their design rationale
 
 2. How long, in hours, did it take you to complete this assignment?
 Rough estimate is more than 30 or 35 hours.
@@ -38,6 +38,8 @@ Rough estimate is more than 30 or 35 hours.
     https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function
 
     https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await
+
+    https://fonts.google.com/specimen/Martian+Mono 
 
 
 4. What classmates or other individuals did you consult as part of this assignment? What did you discuss?
@@ -84,3 +86,5 @@ Logged data backs up to the user's device using Capacitor Preferences.
 
 
 14. How does your app implement or follow principles of good mobile design?
+
+We have a useful initial view, as well as follow platform conventions. We also have error prevention, as it does not allow you to save an overnight sleep if you make your wake time before your bed time OR make your wake time the same time, with a message that says "Wake time msut be after bedtime."
