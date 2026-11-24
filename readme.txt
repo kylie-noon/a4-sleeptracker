@@ -2,17 +2,17 @@
 
 1. How many assignment points do you believe you completed (replace the *'s with your numbers)?
 
-4/10
+5/10
 - 1/1 The ability to log overnight sleep
 - 1/1 The ability to log sleepiness during the day
-- */1 The ability to view these two categories of logged data
+- 1/1 The ability to view these two categories of logged data
 - 2/2 Either using a native device resource or backing up logged data
 - */2 Following good principles of mobile design
 - */2 Creating a compelling app
 - */1 A readme and demo video which explains how these features were implemented and their design rationale
 
 2. How long, in hours, did it take you to complete this assignment?
-
+Rough estimate is more than 30 or 35 hours.
 
 
 3. What online resources did you consult when completing this assignment? (list specific URLs)
@@ -39,6 +39,7 @@
 
     https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await
 
+
 4. What classmates or other individuals did you consult as part of this assignment? What did you discuss?
 None
 
@@ -59,15 +60,15 @@ We designed specifically for iOS.
 
 
 8. How can a person log overnight sleep in your app? Why did you choose to support logging overnight sleep in this way?
-
+They can do this by pressing "Log Overnight Sleep," which brings them to a different page to do this. We chose this way since it was straightforward and the user can focus on one task at a time.
 
 
 9. How can a person log sleepiness during the day in your app? Why did you choose to support logging sleepiness in this way?
-
+They can do this by pressing "Log Sleepiness," which brings them to a different page to do this. We chose this way since it was straightforward and the user can focus on one task at a time.
 
 
 10. How can a person view the data they logged in your app? Why did you choose to support viewing logged data in this way?
-
+They can view data by clicking on either "View All Entries," "View Logged Sleep Overnight Entries," and "View Logged Sleepiness Entries." We made them clear buttons at the top so navigating was straightforward and accessible.
 
 
 11. Which feature choose--using a native device resource, backing up logged data, or both?
