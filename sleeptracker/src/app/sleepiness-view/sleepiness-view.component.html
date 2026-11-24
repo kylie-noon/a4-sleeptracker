@@ -1,0 +1,17 @@
+<h2 class="log-heading">Sleepiness Log</h2>
+
+@for (e of sortedEntries; track e.id) {
+<ion-card class="entry-card">
+  <ion-card-content class="entry-content">
+    <span [class]="'badge ' + partOfDay(e.loggedAt)">{{ e.loggedValue }}</span>
+    <div class="log-text">
+      <strong>{{ descriptions[e.loggedValue] }}</strong>
+      <small>{{ e.dateString() }}</small>
+    </div>
+  </ion-card-content>
+</ion-card>
+} @empty {
+<ion-card>
+  <ion-card-content>No sleepiness logged yet.</ion-card-content>
+</ion-card>
+}

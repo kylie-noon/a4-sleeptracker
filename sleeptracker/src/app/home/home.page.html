@@ -1,4 +1,41 @@
 <ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>Sleeptracker</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="log-cards">
+    <ion-card button routerLink="/log-sleep" class="log-card" color="secondary">
+      <ion-card-header>
+        <ion-card-title>🌙 Log Overnight Sleep</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card button routerLink="/log-sleepiness" class="log-card" color="secondary">
+      <ion-card-header>
+        <ion-card-title>☀️ Log Sleepiness</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+  </div>
+
+  <div class="segment-wrap">
+    <ion-segment [(ngModel)]="chosenView">
+      <ion-segment-button value="all"><ion-label>All</ion-label></ion-segment-button>
+      <ion-segment-button value="overnight"><ion-label>Overnight</ion-label></ion-segment-button>
+      <ion-segment-button value="sleepiness"><ion-label>Sleepiness</ion-label></ion-segment-button>
+    </ion-segment>
+  </div>
+
+  @if (chosenView === 'all' || chosenView === 'overnight') {
+  <app-overnight-dashboard></app-overnight-dashboard>
+  }
+  @if (chosenView === 'all' || chosenView === 'sleepiness') {
+  <app-sleepiness-view></app-sleepiness-view>
+  }
+</ion-content>
+
+<!-- <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
       Sleeptracker
@@ -38,8 +75,10 @@
   <ion-card>
     <ion-card-content>Nothing has been logged yet.</ion-card-content>
   </ion-card>
-  }
-  <!-- <ion-button expand="block" routerLink="/log-sleep">Log Overnight Sleep</ion-button>
+  } -->
+
+
+<!-- OLD ONE<ion-button expand="block" routerLink="/log-sleep">Log Overnight Sleep</ion-button>
   <ion-button expand="block" routerLink="/log-sleepiness">Log Sleepiness</ion-button>
 
   <ion-segment [(ngModel)]="chosenView">
@@ -68,4 +107,4 @@
       </ion-item>
     }
   </ion-list> -->
-</ion-content>
+<!-- </ion-content> -->

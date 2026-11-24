@@ -1,0 +1,58 @@
+$morning: #f0a83c;
+$afternoon: #8ecae6;
+$night: #4a3f8f;
+
+.log-heading {
+    margin: 16px 16px 0;
+    font-size: 1.1rem;
+}
+
+.entry-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.entry-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.entry-card:hover,
+.entry-card:active {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+}
+
+.morning {
+    background: $morning;
+}
+
+.afternoon {
+    background: $afternoon;
+    color: #1b3a4b;
+}
+
+.night {
+    background: $night;
+}
+
+.log-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.log-text small {
+    color: gray;
+}

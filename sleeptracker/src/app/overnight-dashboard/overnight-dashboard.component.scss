@@ -1,0 +1,26 @@
+.stats {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.stat {
+    flex: 1;
+    background: var(--ion-background-color);
+    border-radius: 12px;
+    padding: 10px 4px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.stat .value {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--ion-color-primary);
+}
+
+.stat .label {
+    font-size: 0.75rem;
+    color: gray;
+}

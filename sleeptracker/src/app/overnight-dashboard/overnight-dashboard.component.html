@@ -1,0 +1,16 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Sleep Dashboard</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    @if (nights.length === 0) {
+    <p>Log your first night of sleep to see your dashboard.</p>
+    } @else {
+    <div class="stats">
+      <div class="stat"><span class="value">{{ longest }}</span><span class="label">Longest</span></div>
+      <div class="stat"><span class="value">{{ shortest }}</span><span class="label">Shortest</span></div>
+      <div class="stat"><span class="value">{{ average }}</span><span class="label">Average</span></div>
+    </div>
+    }
+  </ion-card-content>
+</ion-card>
