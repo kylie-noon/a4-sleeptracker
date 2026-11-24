@@ -5,12 +5,12 @@ import { OvernightSleepData } from '../data/overnight-sleep-data';
 import { StanfordSleepinessData } from '../data/stanford-sleepiness-data';
 
 @Injectable({
-  providedIn: 'root'
+	providedIn: 'root'
 })
 export class SleepService {
-	public static AllSleepData:SleepData[] = [];
-	public static AllOvernightData:OvernightSleepData[] = [];
-	public static AllSleepinessData:StanfordSleepinessData[] = [];
+	public static AllSleepData: SleepData[] = [];
+	public static AllOvernightData: OvernightSleepData[] = [];
+	public static AllSleepinessData: StanfordSleepinessData[] = [];
 
 	constructor() {
 		this.loadData();
@@ -51,12 +51,13 @@ export class SleepService {
 		await Preferences.set({ key: 'sleepData', value: JSON.stringify(plain) });
 	}
 
-	public logOvernightData(sleepData:OvernightSleepData) {
+	public logOvernightData(sleepData: OvernightSleepData) {
 		SleepService.AllSleepData.push(sleepData);
 		SleepService.AllOvernightData.push(sleepData);
+		this.saveData();
 	}
 
-	public logSleepinessData(sleepData:StanfordSleepinessData) {
+	public logSleepinessData(sleepData: StanfordSleepinessData) {
 		SleepService.AllSleepData.push(sleepData);
 		SleepService.AllSleepinessData.push(sleepData);
 		this.saveData();
